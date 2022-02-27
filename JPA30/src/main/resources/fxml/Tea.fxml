@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.cvut.fel.pjv.jpa30.FXMLControllers.TeaFXMLController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#06489e" height="600.0" opacity="0.91" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <TableView fx:id="teaTable" layoutX="24.0" layoutY="49.0" prefHeight="344.0" prefWidth="748.0">
+        <columns>
+          <TableColumn fx:id="teaIDCol" prefWidth="52.0" text="teaID" />
+          <TableColumn fx:id="nameCol" prefWidth="139.20001220703125" text="name" />
+            <TableColumn fx:id="typeCol" prefWidth="74.4000244140625" text="type" />
+            <TableColumn fx:id="sellColl" prefWidth="75.199951171875" text="sell. price" />
+            <TableColumn fx:id="purchaseCol" minWidth="5.60003662109375" prefWidth="74.4000244140625" text="purch. price" />
+            <TableColumn fx:id="CountryColl" prefWidth="124.7999267578125" text="country" />
+            <TableColumn fx:id="LocationCol" prefWidth="110.39990234375" text="location" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="26.0" layoutY="411.0" prefHeight="75.0" prefWidth="748.0" spacing="8.0">
+         <children>
+            <TextField fx:id="teaIDInput" prefHeight="26.0" prefWidth="49.0" promptText="teaID" />
+            <TextField fx:id="nameInput" prefHeight="26.0" prefWidth="110.0" promptText="name" />
+            <TextField fx:id="typeInput" prefHeight="26.0" prefWidth="87.0" promptText="type" />
+            <TextField fx:id="sellingPriceInput" prefHeight="26.0" prefWidth="64.0" promptText="sell. price" />
+            <TextField fx:id="purchasePriceInput" prefHeight="26.0" prefWidth="62.0" promptText="purch. price" />
+            <TextField fx:id="countryInput" prefHeight="26.0" prefWidth="110.0" promptText="country" />
+            <TextField fx:id="locationInput" prefHeight="26.0" prefWidth="87.0" promptText="location" />
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#CreateButtonClick" prefHeight="26.0" prefWidth="82.0" text="Create" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="35.0" layoutY="474.0" prefHeight="59.0" prefWidth="726.0" spacing="8.0">
+         <children>
+            <TextField fx:id="teaIDInputToDelete" alignment="CENTER" promptText="teaID to delete or update" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonClcik" text="Delete" />
+            <Button fx:id="UpdateButton" mnemonicParsing="false" onAction="#UpdateButtonClick" text="Update" />
+         </children>
+      </HBox>
+      <HBox fx:id="updateMenu" alignment="CENTER" layoutX="26.0" layoutY="526.0" opacity="0.0" prefHeight="59.0" prefWidth="748.0" spacing="8.0">
+         <children>
+            <TextField fx:id="teaIDChange" disable="true" editable="false" prefHeight="26.0" prefWidth="74.0" promptText="teaID" />
+            <TextField fx:id="nameChange" prefHeight="26.0" prefWidth="134.0" promptText="name" />
+            <TextField fx:id="typeChange" prefHeight="26.0" prefWidth="111.0" promptText="type" />
+            <TextField fx:id="sellingPriceChange" prefHeight="26.0" prefWidth="92.0" promptText="sell. price" />
+            <TextField fx:id="purchasePrice" prefHeight="26.0" prefWidth="85.0" promptText="purch. price" />
+            <TextField fx:id="countryChange" prefHeight="26.0" prefWidth="152.0" promptText="country" />
+            <TextField fx:id="locationChange" prefHeight="26.0" prefWidth="120.0" promptText="location" />
+            <Button fx:id="acceptChange" mnemonicParsing="false" onAction="#acceptButtonClick" prefHeight="26.0" prefWidth="102.0" text="Confirm" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </HBox>
+      <Button fx:id="backButton" layoutX="731.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonClick" text="Back" />
+   </children>
+</AnchorPane>

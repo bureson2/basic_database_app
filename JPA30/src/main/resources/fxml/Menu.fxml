@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cz.cvut.fel.pjv.jpa30.FXMLControllers.MenuFXMLController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#06489e" height="600.0" opacity="0.91" stroke="BLACK" strokeType="INSIDE" width="800.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b7b7b7" height="468.0" layoutX="204.0" layoutY="68.0" stroke="BLACK" strokeType="INSIDE" width="392.0" />
+      <VBox alignment="CENTER" layoutX="250.0" layoutY="100.0" spacing="80.0">
+         <children>
+            <Button fx:id="teaButton" mnemonicParsing="false" onAction="#showTeaClicked" opacity="0.85" prefHeight="80.0" prefWidth="300.0" text="Show tea" textOverrun="WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font></Button>
+            <Button fx:id="orderButton" mnemonicParsing="false" onAction="#showOrdesClick" opacity="0.85" prefHeight="80.0" prefWidth="300.0" text="Show orders">
+               <font>
+                  <Font name="Arial" size="26.0" />
+               </font></Button>
+            <Button fx:id="allButton" mnemonicParsing="false" onAction="#showAllClick" opacity="0.85" prefHeight="80.0" prefWidth="300.0" text="Show orders and tea">
+               <font>
+                  <Font size="26.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
